@@ -1,0 +1,80 @@
+/* Fondo general (NO puede quedar blanco) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #cfe0f3; /* azul claro visible */
+}
+
+/* Centrado absoluto */
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja del login */
+.box {
+    background-color: white;
+    padding: 30px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs y select */
+input,
+select {
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+/* Registro */
+.registro {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.registro a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.registro a:hover {
+    text-decoration: underline;
+}

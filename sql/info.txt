@@ -1,0 +1,1 @@
+BD2Los_Primary_Keys contiene toda la base de datos. Si se quiere consultar algo en especifico tambien estan los .sql por separado.

@@ -1,0 +1,280 @@
+/* ESTILOS PARA BORSÍ - FONDO ANCHO */
+
+/* 1. ELIMINAR LIMITACIONES DEL BODY */
+body {
+    background-color: #f5f5f5; /* Este es el fondo de toda la página */
+    color: #333;
+    line-height: 1.6;
+    padding: 0 !important; /* Eliminar padding */
+    margin: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+}
+
+/* 2. CONTENEDOR PRINCIPAL QUE OCUPA TODO EL ANCHO */
+.container {
+    width: 100% !important;
+    max-width: 100% !important; /* Sin límite */
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding: 30px 20px !important; /* Padding solo arriba/abajo */
+    background-color: #f5f5f5; /* Mismo color que body para que parezca continuo */
+}
+
+/* 3. CAJA BLANCA CENTRADA PERO MÁS ANCHA */
+.box {
+    background-color: white;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    margin: 0 auto !important; /* Centrada */
+    width: 95% !important; /* Ocupa 95% del contenedor */
+    max-width: 1800px !important; /* Muy ancho pero con límite */
+    min-width: 95% !important;
+}
+
+/* 4. TABLA DENTRO DE LA CAJA BLANCA */
+table {
+    width: 100% !important;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0 !important;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+}
+
+/* 5. CABECERAS */
+th {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 18px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    border-bottom: 3px solid #1f639b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 6. CELDAS */
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+    font-size: 15px;
+    color: #444;
+}
+
+/* 7. FORMULARIO DENTRO DE LA TABLA */
+td form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+
+}
+form{
+    margin-left: 10px;
+}
+
+/* 8. SELECTOR GRANDE */
+td form select[name="idGrupo"] {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+td form select[name="idGrupo"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+/* 9. BOTÓN BONITO */
+td form button[name="accion"] {
+    background: linear-gradient(135deg, #27ae60, #219653);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 700;
+    white-space: nowrap;
+    min-width: 130px;
+}
+
+td form button[name="accion"]:hover {
+    background: linear-gradient(135deg, #219653, #1e8449);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.3);
+}
+
+/* 10. TÍTULO */
+h2 {
+    color: #34495e;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* 11. ENLACE VOLVER */
+p.registro {
+    margin-top: 35px;
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+}
+
+p.registro a {
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 14px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+p.registro a:hover {
+    background: white;
+    color: #3498db;
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.2);
+}
+
+/* 12. RESPONSIVE PARA PANTALLAS GRANDES */
+@media (min-width: 1600px) {
+    .box {
+        width: 90% !important; /* En pantallas muy grandes, ocupa el 90% */
+        max-width: 2000px !important; /* Aún más ancho */
+    }
+}
+
+/* 13. PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 1200px) {
+    .box {
+        width: 98% !important; /* En pantallas medianas, ocupa casi todo */
+        padding: 25px 30px;
+    }
+    
+    td form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    td form select[name="idGrupo"] {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    td form button[name="accion"] {
+        width: 100%;
+    }
+}
+
+/* 14. PARA MÓVILES */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 10px !important;
+    }
+    
+    .box {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100% !important; /* En móvil, ocupa el 100% */
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* ================================================= */
+/* 15. BOTONES GENERALES (TODOS LOS FORMULARIOS)     */
+/* ================================================= */
+button {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 
+        background 0.3s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover general */
+button:hover {
+    background: linear-gradient(135deg, #1b5e20, #145a32);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Click */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ================================================= */
+/* 16. BOTÓN ELIMINAR (ACCIONES PELIGROSAS)          */
+/* ================================================= */
+button.eliminar {
+    background: linear-gradient(135deg, #c62828, #8e0000);
+}
+
+button.eliminar:hover {
+    background: linear-gradient(135deg, #8e0000, #6a0000);
+}
+
+/* ================================================= */
+/* 17. BOTÓN SECUNDARIO (OPCIONAL)                   */
+/* ================================================= */
+button.secundario {
+    background: linear-gradient(135deg, #0277bd, #01579b);
+}
+
+button.secundario:hover {
+    background: linear-gradient(135deg, #01579b, #003c6b);
+}
+
+/* ================================================= */
+/* 18. BOTONES EN FORMULARIOS (ESPACIADO MEJORADO)   */
+/* ================================================= */
+form button {
+    margin-top: 10px;
+}
+
+/* En móviles: botones ocupan todo el ancho */
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
